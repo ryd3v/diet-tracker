@@ -1,0 +1,82 @@
+{
+  "author": {
+    "name": "Ryan Collins",
+    "email": "hello@ryd3v.com"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "build": {
+    "productName": "diet-tracker",
+    "appId": "com.ryd3v.id",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "linux": {
+      "category": "Utility"
+    }
+  },
+  "copyright": "Copyright © 2024 Ryan Collins",
+  "dependencies": {
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "got": ">=14.4.3",
+    "minimatch": "^10.0.1",
+    "nth-check": ">=2.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^4.2.3"
+  },
+  "description": "A diet app to track calories from Apple health",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "electron": "^32.2.0",
+    "electron-builder": "^25.1.8",
+    "electron-compile": "^6.4.4",
+    "got": ">=14.4.3",
+    "loader-utils": "^3.3.1",
+    "nth-check": ">=2.1.1",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "yargs-parser": "^21.1.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "homepage": "./",
+  "license": "MIT",
+  "main": "public/electron.js",
+  "name": "diet-tracker",
+  "private": true,
+  "productName": "diet-tracker",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dev": "yarn start",
+    "electron": "electron .",
+    "build:windows": "electron-builder --win --dir",
+    "dist:windows": "electron-builder --win",
+    "build:macos": "electron-builder --macos --dir",
+    "dist:macos": "electron-builder --macos",
+    "build:linux": "electron-builder --linux --dir",
+    "dist:linux": "electron-builder --linux"
+  },
+  "version": "0.0.1",
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
