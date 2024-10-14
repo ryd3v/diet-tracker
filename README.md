@@ -8,6 +8,10 @@ on a
 have a little more granular control, if you happen to train a little harder, you can reward yourself with a few more
 calories, while staying in your deficit.
 
+## Screenshot
+
+![Calorie Deficit Tracker](Screenshot.png)
+
 ## Features
 
 - **Calorie Deficit Calculation**: Calculate your total calorie deficit based on your resting energy, activity calories,
@@ -66,10 +70,6 @@ To get started with the Calorie Deficit Tracker, follow these steps:
 2. **Calculate Deficit**: Click the "Calculate Calorie Deficit" button to see if you meet the 500-calorie deficit goal.
 3. **Adjust Accordingly**: The app will provide you with suggestions on whether you can increase your intake or need to
    adjust your activity.
-
-## Screenshots
-
-![Calorie Deficit Tracker](screenshot.png)
 
 ## License
 
