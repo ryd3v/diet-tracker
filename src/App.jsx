@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
+import {BsFire} from "react-icons/bs";
+import {GiShinyApple} from "react-icons/gi";
 
 function App() {
     const [restingEnergy, setRestingEnergy] = useState(0);
@@ -37,52 +39,54 @@ function App() {
     };
 
     return (
-        <div className="bg-zinc-900 container mx-auto p-4">
-            <h1 className="text-3xl font-bold text-center mb-4 text-zinc-200">Calorie Deficit Tracker</h1>
-
-            <div className="mb-4">
-                <label className="block text-zinc-300 mb-1">Average Resting Energy (calories):</label>
+        <div className="bg-zinc-900 container mx-auto px-6 mt-2">
+            <h1 className="text-3xl font-bold text-center mb-2 text-zinc-200">Diet Tracker</h1>
+            <p className='text-zinc-400 text-center'>Enter the weekly average from Apple Health</p>
+            <div className="py-8">
+                <label className="flex flex-row text-zinc-300 mb-1 text-xl"><BsFire size={22}/><span className='pl-1'>Average Resting Energy
+                    (calories):</span></label>
                 <input
                     type="number"
-                    className="w-full p-2 bg-zinc-800 border border-zinc-500 text-orange-500 rounded"
+                    className="w-full p-2 bg-zinc-800 border border-zinc-900 text-orange-500 rounded focus:outline-none"
                     value={restingEnergy}
                     onChange={(e) => setRestingEnergy(Number(e.target.value))}
                 />
             </div>
 
             <div className="mb-4">
-                <label className="block text-zinc-300 mb-1">Average Activity (calories):</label>
+                <label className="flex flex-row text-zinc-300 mb-1 text-xl"><BsFire size={22}/><span className='pl-1'>Average Activity
+                    (calories):</span></label>
                 <input
                     type="number"
-                    className="w-full p-2 bg-zinc-800 border border-zinc-500 text-orange-500 rounded"
+                    className="w-full p-2 bg-zinc-800 border border-zinc-900 text-orange-500 rounded focus:outline-none"
                     value={activityCalories}
                     onChange={(e) => setActivityCalories(Number(e.target.value))}
                 />
             </div>
 
             <div className="mb-4">
-                <label className="block text-zinc-300 mb-1">Average Dietary Energy (calories):</label>
+                <label className="flex flex-row text-zinc-300 mb-1 text-xl"><GiShinyApple size={22}/><span
+                    className='pl-1'>Average Dietary Energy
+                    (calories):</span></label>
                 <input
                     type="number"
-                    className="w-full p-2 bg-zinc-800 border border-zinc-500 text-green-500 rounded"
+                    className="w-full p-2 bg-zinc-800 border border-zinc-900 text-green-500 rounded focus:outline-none"
                     value={dietaryEnergy}
                     onChange={(e) => setDietaryEnergy(Number(e.target.value))}
                 />
             </div>
 
             <button
-                className="w-50 bg-zinc-800 text-green-500 font-bold py-2 px-4 rounded border border-zinc-500"
+                className="shadow-[inset_0_0_0_2px_#616467] text-black px-12 py-4 rounded-full tracking-widest uppercase font-bold bg-transparent hover:bg-[#616467] hover:text-white dark:text-neutral-200 transition duration-200"
                 onClick={calculateDeficit}
             >
-                Calculate Calorie Deficit
+                Calculate Deficit
             </button>
 
-            <div className="px-4 py-4 text-zinc-200 font-semibold">
-                <ul className='list-disc'>
-                    <li className="text-lg text-green-500">Calorie Deficit: {calorieDeficit} cal</li>
-                    <p className="text-lg">{message}</p>
-                    {adjustmentMessage && <p className="text-sm mt-2 text-fuchsia-500">{adjustmentMessage}</p>}
-                </ul>
+            <div className="px-2 py-4 text-zinc-200 font-semibold">
+                <p className="text-lg text-green-500">Calorie Deficit: {calorieDeficit} cal</p>
+                <p className="text-lg">{message}</p>
+                {adjustmentMessage && <p className="text-sm mt-2 text-fuchsia-500">{adjustmentMessage}</p>}
             </div>
         </div>
     );

@@ -1,6 +1,7 @@
 const path = require('path');
 
 const {app, BrowserWindow, Menu} = require('electron');
+
 const menu = require('./menu');
 
 function createWindow() {
@@ -27,5 +28,5 @@ app.on('activate', () => {
         createWindow();
     }
 });
-app.setName('Boilerplate');
+app.setName('DietTracker');
 Menu.setApplicationMenu(menu);
