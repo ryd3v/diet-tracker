@@ -28,7 +28,8 @@ function App() {
             if (deficit > 500) {
                 const extraDeficit = deficit - 500;
                 const extraCarbs = Math.round(extraDeficit / 4); // Carbs have 4 calories per gram
-                setAdjustmentMessage(`You have an extra deficit of ${extraDeficit} calories. You could eat an additional ${extraCarbs} grams of carbs if needed.`);
+                setAdjustmentMessage(`You have an extra deficit of ${extraDeficit} calories. 
+                You could eat an additional ${extraCarbs} grams of carbs if needed.`);
             } else {
                 setAdjustmentMessage('');
             }
@@ -40,10 +41,10 @@ function App() {
 
     return (
         <div className="bg-zinc-900 container mx-auto px-6 mt-2">
-            <h1 className="text-3xl font-bold text-center mb-2 text-zinc-200">Diet Tracker</h1>
-            <p className='text-zinc-400 text-center'>Enter the weekly average from Apple Health</p>
-            <div className="py-8">
-                <label className="flex flex-row text-zinc-300 mb-1 text-xl"><BsFire size={22}/><span className='pl-1'>Average Resting Energy
+            <h1 className="text-3xl font-bold text-left text-zinc-200">Diet Tracker</h1>
+            <div className="py-6">
+                <label className="flex flex-row text-zinc-300 mb-1 text-xl"><BsFire className='text-orange-500'
+                                                                                    size={22}/><span className='pl-1'>Average Resting Energy
                     (calories):</span></label>
                 <input
                     type="number"
@@ -54,7 +55,8 @@ function App() {
             </div>
 
             <div className="mb-4">
-                <label className="flex flex-row text-zinc-300 mb-1 text-xl"><BsFire size={22}/><span className='pl-1'>Average Activity
+                <label className="flex flex-row text-zinc-300 mb-1 text-xl"><BsFire className='text-orange-500'
+                                                                                    size={22}/><span className='pl-1'>Average Activity
                     (calories):</span></label>
                 <input
                     type="number"
@@ -65,7 +67,8 @@ function App() {
             </div>
 
             <div className="mb-4">
-                <label className="flex flex-row text-zinc-300 mb-1 text-xl"><GiShinyApple size={22}/><span
+                <label className="flex flex-row text-zinc-300 mb-1 text-xl"><GiShinyApple className='text-green-500'
+                                                                                          size={22}/><span
                     className='pl-1'>Average Dietary Energy
                     (calories):</span></label>
                 <input
@@ -84,9 +87,9 @@ function App() {
             </button>
 
             <div className="px-2 py-4 text-zinc-200 font-semibold">
-                <p className="text-lg text-green-500">Calorie Deficit: {calorieDeficit} cal</p>
+                <p className="text-lg text-zinc-200">Calorie Deficit: {calorieDeficit} cal</p>
                 <p className="text-lg">{message}</p>
-                {adjustmentMessage && <p className="text-sm mt-2 text-fuchsia-500">{adjustmentMessage}</p>}
+                {adjustmentMessage && <p className="text-sm mt-2 text-pink-500 max-w-lg">{adjustmentMessage}</p>}
             </div>
         </div>
     );
